@@ -7,7 +7,9 @@ import { Quote } from './quote'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // constructor(){
+  goals:string[];
+
+  constructor(){}
 
 
 }

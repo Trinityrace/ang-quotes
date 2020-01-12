@@ -1,12 +1,16 @@
-<p>quote works!</p>
+<!-- <p>quote works!</p> -->
 
 <div>
   <h1>My Quotes</h1>
   <hr>
   <ul>
-    <li *ngFor ='let quote of quotes'> 
-      {{quote.name}}
-    </li>
+    <div *ngFor ='let quote of quotes;let i=index'> 
+      <li>{{quote.name}}</li>
+      <button (click)='toggleDetails(i)'>Toggle Details
+      </button>
+      <app-quote-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete)
+        =completeQuote($event,i)></app-quote-detail>
+  </div>
   </ul>
-  <p *ngIf='quotes.length>4'>Your quotes are too many
+  <p *ngIf='quotes.length> 4'>Your quotes are too many
 </div>
