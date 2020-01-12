@@ -1,16 +1,13 @@
 <!-- <p>quote works!</p> -->
 
-<div>
-  <h1>My Quotes</h1>
-  <hr>
-  <ul>
-    <div *ngFor ='let quote of quotes;let i=index'> 
-      <li>{{quote.name}}</li>
-      <button (click)='toggleDetails(i)'>Toggle Details
-      </button>
-      <app-quote-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete)
-        =completeQuote($event,i)></app-quote-detail>
+
+<h1>My Quotes</h1>
+<hr>
+<ul>
+  <div *ngFor='let goal of quotes;let i = index'>
+    <li>{{quote.name}} due on {{goal.completeDate|date|uppercase}}</li>
+    <button (click)='toggleDetails(i)'>Toggle Details</button>
+    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-details>
   </div>
-  </ul>
-  <p *ngIf='quotes.length> 4'>Your quotes are too many
-</div>
+</ul>
+<p *ngIf='quotes.length > 4'>You have too many quotes</p>
