@@ -18,6 +18,18 @@ export class QuoteComponent implements OnInit {
     new Quote(6 , 'You hold shift to run because running is upprcase walking', 'By VidGamer',new Date(2002,12,29)),
   ];
 
+  deleteQuote(isComplete, index){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete this quote ${this.quotes[index].name}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+  }
+
+
+
   //  toggleDetails(index){
   //    this.quotes[].showDescription = !this.quotes[index].showDescription;
   //  }
@@ -25,7 +37,7 @@ export class QuoteComponent implements OnInit {
   // goalComplete(boolean){
   //   this.isComplete.emit(complete);
   // }
-  // completeGoal(isComplete, index){
+  // completeQuote(isComplete, index){
   //   if (isComplete) {
   //     this.quotes.splice(index,1);
   //   }
