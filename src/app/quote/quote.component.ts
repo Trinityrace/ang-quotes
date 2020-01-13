@@ -13,7 +13,7 @@ export class QuoteComponent implements OnInit {
       1,
       "Theres never any blood in Star Wars movies because all the lasers and lightsabers would cauterize the wounds instantly",
       "By MoonWlker",
-      new Date()
+      new Date(2013,12,31)
     ),
     new Quote(
       2,
