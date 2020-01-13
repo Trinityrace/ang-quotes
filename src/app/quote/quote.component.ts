@@ -41,6 +41,12 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       6,
+      "Rappers who rap fast would have a huge advantage in the Harry Potter universe when casting spells.",
+      "By MeGenius",
+      new Date(2020, 1, 13)
+    ),
+    new Quote(
+      7,
       "You hold shift to run because running is upprcase walking",
       "By VidGamer",
       new Date(2002, 12, 29)
