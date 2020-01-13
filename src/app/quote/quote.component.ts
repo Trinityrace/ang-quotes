@@ -47,38 +47,37 @@ export class QuoteComponent implements OnInit {
     )
   ];
 
-  addNewGoal(quote){
-    let goalLength = this.quotes.length;
-    quote.id = goalLength+1;
-    quote.completeDate = new Date(quote.completeDate)
-    this.quotes.push(quote)
+  toggleDetails(index) {
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
+  addNewGoal(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote);
+  }
 
-  // deleteQuote(isComplete, index) {
-  //   if (isComplete) {
-  //     let toDelete = confirm(
-  //       `Are you sure you want to delete this quote ${this.quotes[index].name}?`
-  //     );
+  deleteQuote(isComplete, index) {
+    if (isComplete) {
+      let toDelete = confirm(
+        `Are you sure you want to delete ${this.quotes[index].name}?`
+      );
 
-  //     if (toDelete) {
-  //       this.quotes.splice(index, 1);
-  //     }
+      if (toDelete) {
+        this.quotes.splice(index, 1);
+      }
     }
   }
-
-  //  toggleDetails(index){
-  //    this.quotes[].showDescription = !this.quotes[index].showDescription;
-  //  }
 
   // goalComplete(boolean){
   //   this.isComplete.emit(complete);
   // }
-  // completeQuote(isComplete, index){
-  //   if (isComplete) {
-  //     this.quotes.splice(index,1);
-  //   }
-  // }
+  completeQuote(isComplete, index) {
+    if (isComplete) {
+      this.quotes.splice(index, 1);
+    }
+  }
 
   constructor() {}
 
