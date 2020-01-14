@@ -50,6 +50,12 @@ export class QuoteComponent implements OnInit {
       "You hold shift to run because running is upprcase walking.",
       "By VidGamer",
       new Date(2002, 12, 29)
+    ),
+    new Quote(
+      8,
+      "Some vampires might get addicted to alcoholics.",
+      "By Trevor Ngugi",
+      new Date(2020, 12, 15)
     )
   ];
 

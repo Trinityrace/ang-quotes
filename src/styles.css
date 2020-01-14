@@ -1,9 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+ body{
+  background-image: url(./assets/2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 40px;
+}
 
 @import "~bootstrap/dist/css/bootstrap.css"
-/* 
-* {
-  background-color: blue;} */
-  /* *{
-    background-image: url(/src/assets/land.jpg);
-  } */
+
+ 
