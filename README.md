@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
 ## Contributors
-Trinity [https://github.com/Trinityrace/quotesAng.git]
+- [Trinity](https://github.com/Trinityrace/quotesAng.git)
 
 ## Description
 A web application which allows users to post their favourite quotes. The user can see posts from other users/authors and can either upvote (like), downvote (dislkie) or delete the quote.
