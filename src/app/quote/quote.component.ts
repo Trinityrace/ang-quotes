@@ -11,7 +11,7 @@ export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote(
       1,
-      "Theres never any blood in Star Wars movies because all the lasers and lightsabers would cauterize the wounds instantly",
+      "Theres never any blood in Star Wars movies because all the lasers and lightsabers would cauterize the wounds instantly.",
       "By MoonWlker",
       new Date(2013,12,31)
     ),
@@ -23,19 +23,19 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       3,
-      "Turbulence is the pot hole of the sky ",
+      "Turbulence is the pot hole of the sky. ",
       "By Trinity",
       new Date(2020, 1, 1)
     ),
     new Quote(
       4,
-      "Some innocent pets have given unconditional love to Serial killers",
+      "Some innocent pets have given unconditional love to Serial killers.",
       "By Chun Li",
       new Date(2019, 12, 25)
     ),
     new Quote(
       5,
-      "Blinds are what keep you from being blinded in the morning",
+      "Blinds are what keep you from being blinded in the morning.",
       "By Myself",
       new Date(2013, 2, 2)
     ),
@@ -47,7 +47,7 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       7,
-      "You hold shift to run because running is upprcase walking",
+      "You hold shift to run because running is upprcase walking.",
       "By VidGamer",
       new Date(2002, 12, 29)
     )
