@@ -1,0 +1,14 @@
+/* body{
+  background-color: chartreuse;
+} */
+h1{
+  text-align: center;
+  color: black;
+  background-color: crimson;
+}
+h1:hover{
+  color: aqua;
+  background-color: blueviolet;
+}
+*{background-color: chartreuse;
+ }

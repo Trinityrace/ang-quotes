@@ -1,9 +1,9 @@
 <!-- <p>quote works!</p> -->
-
+<body>
 <div class="container">
   <h1>MY QUOTES</h1>
   <hr>
-
+  
   <div class="row">
     <div class="col-md-6">
       <div *ngFor='let quote of quotes;let i = index'>
@@ -23,3 +23,4 @@
   </div>
   <p *ngIf='quotes.length > 7'>You have too many QUOTES</p>
 </div>
+</body>
