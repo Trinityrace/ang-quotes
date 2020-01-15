@@ -6,9 +6,10 @@
 
   <form (ngSubmit)="submitQuote()" #quoteForm="ngForm">
     <div class="form-group">
-      <label for="name">Name</label>
+      <label for="name">QUOTE</label>
       <input
-      onfocus="this.value=''"
+      onfocus="value=''"
+      rows="4"
         type="text"
         class="form-control"
         id="name"
@@ -25,13 +26,13 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="description">QUOTE</label>
+      <label for="description">NAME  </label>
       <textarea
   
       onfocus="this.value=''"
         class="form-control"
         id="description"
-        rows="4"
+        rows=""
         [(ngModel)]="newQuote.description"
         name="description"
         #description="ngModel"
@@ -47,6 +48,7 @@
     <div class="form-group">
       <label for="complete">Posted</label>
       <input
+      value=""
         type="date"
         id="complete"
         [(ngModel)]="newQuote.completeDate"
@@ -54,13 +56,38 @@
         #completeDate="ngModel"
         required
       />
+  
+    
+
       <div
         [hidden]="completeDate.valid || completeDate.pristine"
         class="alert alert-danger"
       >
-        <p>Date is required</p>
+
       </div>
     </div>
-    <button id="submit" type="submit" class="btn btn-success">Add Quote</button>
+      
+
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input
+        onfocus="value=''"
+          type="text"
+          id="author"
+          [(ngModel)]="newQuote.author"
+          name="author"
+          #author="ngModel"
+          required
+        />
+
+
+      <div
+        [hidden]="completeDate.valid || completeDate.pristine"
+        class="alert alert-danger"
+      >
+        <p>Who is the Author?</p>
+      </div>
+    </div>
+    <button id="submit" type="submit"  class="btn btn-success">Add Quote</button>
   </form>
 </div>
