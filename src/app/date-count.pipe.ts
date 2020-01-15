@@ -28,7 +28,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateCountPipe implements PipeTransform {
 
-  transform(value: any): string {
+  transform(value: string): string {
     let d = new Date(value);
     let now = new Date();
     let seconds = Math.round(Math.abs((now.getTime() - d.getTime())/1000));
